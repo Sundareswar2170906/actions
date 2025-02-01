@@ -10,6 +10,10 @@ on:
         default: false
 
 
+env:
+  hello: Sundareswar
+
+
 jobs:
     echo-data:
         runs-on: ubuntu-latest
@@ -25,5 +29,9 @@ jobs:
                 echo "Run number: ${{github.run_number}}"
             - name: Disp
               run: |
-                echo "Variable value: ${{vars.MY_VARS}}"
+                echo "Variable value: ${{env.hello}}"
+            - name: New
+              env:
+                hello: Great
+              run: echo ${{env.hello}}
               
