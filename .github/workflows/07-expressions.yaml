@@ -13,4 +13,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: xxx
-              run: if ${{inputs.debug}} echo "Hello"
+              if: ${{inputs.debug}}
+              run: |
+               echo "Hello"
