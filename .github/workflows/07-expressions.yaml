@@ -3,10 +3,14 @@ name: 07 - Using Expressions
 on:
     push:
     workflow_dispatch:
+        inputs:
+            debug:
+                default: false
+                type: boolean
 
 jobs:
     Hello:
         runs-on: ubuntu-latest
         steps:
             - name: xxx
-              run: echo "Hello"
+              run: if ${{inputs.debug}} echo "Hello"
