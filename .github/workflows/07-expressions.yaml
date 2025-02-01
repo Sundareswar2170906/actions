@@ -1,0 +1,12 @@
+name: 07 - Using Expressions
+
+on:
+    push:
+    workflow_dispatch:
+
+jobs:
+    Hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: xxx
+              run: echo "Hello"
