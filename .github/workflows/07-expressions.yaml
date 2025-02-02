@@ -1,5 +1,5 @@
 name: 07 - Using Expressions
-run-name: if ${{inputs.debug}} && ON || OFF
+run-name: ${{inputs.debug && 'ON' || 'OFF' }}
 
 on:
     push:
